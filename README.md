@@ -48,5 +48,5 @@ A spectrogram of violin sound. The bright lines at the bottom are the fundamenta
 To calculate the spectogram, the `librosa.stft` function has been used, which returns the STFT matrix (see https://en.wikipedia.org/wiki/Short-time_Fourier_transform), where, in each of the cells of the matrix contain a complex number with real part and imaginary part.
 To calculate the audio signal from the coded image, the `librosa.istft` function has been used, where the input parameters is the matrix previously commented, and the parameters used for the fourier transforms.
 
-This project is part of the competition organized by the youtube channel [dotcsv](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg), which I strongly recommend to subscribe. 
+This project is part of the competition organized by the youtube channel [dotcsv](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg), which I strongly recommend to subscribe if you want to learn machine learning, deep learning, etc, or if you don't want learn about this, you can also subscribe. 
 \#RetoDotCSV2080Super
