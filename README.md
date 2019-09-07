@@ -4,6 +4,9 @@ Tensorflow implementation of pix2pix for creating music from a voice signal.
 ## Description:
 This project consists in the creation of music from a voice audio, using the implementation of Tensorflow pix2pix. It is approached as an inverse problem of separation of components in a song.  I have pre-processed the raw data (vocals and mixture pair dataset) in an image that contains encoded information provided by the spectrogram of the signals, which can be treated as a 2-D image to train the pix2pix model. 
 
+## Requirements:
+TBC!!!
+
 ## Dataset:
 The dataset used is the musdb18hq, which is widely used in the field of Deep learning for tasks of Music Unmixing, ie for a song (mixture), is intended to isolate each of the components that make up a song. 
 The musdb18 is a dataset of 150 full lengths music tracks (~10h duration) of different genres along with their isolated drums, bass, vocals and others stems.
@@ -44,3 +47,4 @@ To calculate the spectogram, the `librosa.stft` function has been used, which re
 To calculate the audio signal from the coded image, the `librosa.istft` function has been used, where the input parameters is the matrix previously commented, and the parameters used for the fourier transforms.
 
 This project is part of the competition organized by the youtube channel [dotcsv](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg), which I strongly recommend to subscribe. 
+\#RetoDotCSV2080Super
