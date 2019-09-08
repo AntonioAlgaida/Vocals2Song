@@ -113,7 +113,6 @@ Example of sound-image-sound process:
    * Decoded audio: ![Decoded audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/decoded%20audio.wav)
 
 This project is part of the competition organized by the youtube channel [dotcsv](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg), which I strongly recommend to subscribe if you want to learn machine learning, deep learning, etc, or if you don't want learn about this, you can also subscribe. 
-\#RetoDotCSV2080Super
 
 
 ## Author:
