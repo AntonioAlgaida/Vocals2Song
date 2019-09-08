@@ -4,6 +4,10 @@ Tensorflow implementation of pix2pix for creating music from a voice signal.
 ## Description:
 This project consists in the creation of music from a voice audio, using the implementation of Tensorflow pix2pix. It is approached as an inverse problem of separation of components in a song.  I have pre-processed the raw data (vocals and mixture pair dataset) in an image that contains encoded information provided by the spectrogram of the signals, which can be treated as a 2-D image to train the pix2pix model. 
 
+## Pix2Pix model:
+TBC!!
+
+
 ## Requirements:
    * NumPy >= 1.11.1
    * TensorFlow >= 1.0.0
