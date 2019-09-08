@@ -65,6 +65,12 @@ Basically any task where it involves audio signals and there is an adequate data
 
 
 ## Results:
+|           | Audio | Spectrogram |
+| --------- | ------------- | ------------- |
+| Input     | Content Cell  | Content Cell  |
+| Output    | Content Cell  | Content Cell  |
+| Predicted | Content Cell  | Content Cell  |
+
 ![Training Gif](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/training_evolution.gif)
 TBC!!
 
