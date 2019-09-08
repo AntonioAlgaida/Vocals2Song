@@ -68,8 +68,8 @@ Basically any task where it involves audio signals and there is an adequate data
 |           | Audio | Spectrogram |
 | --------- | ------------- | ------------- |
 | Voice     | ![Audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/input.wav)   | ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/input.png)  |
-| Mixture    | ![Audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/output.wav)   | [](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/output.png)  |
-| Mixture predicted | ![Audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/predicted.wav)  | [](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/predicted.png)  |
+| Mixture    | ![Audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/output.wav)   | ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/output.png)  |
+| Mixture predicted | ![Audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/predicted.wav)  | ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/predicted.png)  |
 
 ![Training Gif](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/training_evolution.gif)
 TBC!!
