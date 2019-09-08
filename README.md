@@ -65,6 +65,7 @@ Basically any task where it involves audio signals and there is an adequate data
 
 
 ## Results:
+[Training Gif](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/training_evolution.gif)
 TBC!!
 
 
