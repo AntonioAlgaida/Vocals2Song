@@ -56,9 +56,9 @@ To calculate the spectogram, the `librosa.stft` function has been used, which re
 To calculate the audio signal from the coded image, the `librosa.istft` function has been used, where the input parameters is the matrix previously commented, and the parameters used for the fourier transforms.
 
 Example of sound-image-sound process:
-Origin audio:
-Encoded image:
-Decoded audio:
+Origin audio: ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/origin%20audio.wav)
+Encoded image: ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/enconded%20audio.bmp)
+Decoded audio: ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/decoded%20audio.wav)
 
 This project is part of the competition organized by the youtube channel [dotcsv](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg), which I strongly recommend to subscribe if you want to learn machine learning, deep learning, etc, or if you don't want learn about this, you can also subscribe. 
 \#RetoDotCSV2080Super
