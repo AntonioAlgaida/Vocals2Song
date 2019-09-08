@@ -34,9 +34,12 @@ As an alternative, we also offer the uncompressed WAV files for models that aim 
 ## Data pre-processing:
 For the data pre-processing, first, the spectrogram of an audio signal of 15 seconds is obtained (for that of standardizing sizes, although they could be filled with zeros if the signal has a duration of that one) and this spectrogram is encoded in an image. In this coding, in the component R (Red) of the image is coded the module of the spectrogram, that is to say, the power of each one of the frequencies in all the temporal range and, in the component G (Green) of the image is coded the phase of the signal, something very important if we want to reconstruct the original signal, since not only we need the module, but also the phase. Finally, component B (Blue) is imposed to be 0. That image is saved with a data format that is able to read Tensorflow as it is .bmp. For it, each one of the components is quantified between integer values from 0 to 255, since .bmp is an image format of 8 bits for each component.
 As the signal we are processing is sampled at 44.1kHz, with a duration of 15 seconds per signal, and the spectrogram is obtained with a fft of size 1024 and with a jump between ffts of 256 samples, the result of processing each of the signals gives us an image of size 2584 x 513 pixels. Remembering that in each one of these pixels is coded the module and the phase for each one of the frequencies in all the temporal interval, whose ranges are quantized between 0 and 255, being images .bmp.
+
 After this processing we obtain the following:
-Encoded voice: ![Encoded voice](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/vocals_encoded.png)
-Encoded mixture: ![Encoded mixture](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/mixture_encoded.png)
+
+Encoded voice: ![Encoded voice](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/examples/1_input.png)
+
+Encoded mixture: ![Encoded mixture](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/examples/1_output.png)
 
 
 ## Dataset created:
