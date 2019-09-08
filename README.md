@@ -25,6 +25,7 @@ Encoded mixture: ![Encoded mixture](https://github.com/AntonioAlgaida/Vocals2Son
 
 
 ## Dataset created:
+The dataset created are 2024 images of voices and it's 2024 images of mixtures. Each image has a resolution of 2056 x 513
 TBC!!
 
 
@@ -47,7 +48,13 @@ Basically any task where it involves audio signals and there is an adequate data
    * It could be encoded in an image that has 4 components (such as RBGA), to reduce quantization noise. This could be done by chopping the module of the spectrogram into 2 ranges ([min, median), [median, max]), and encoding these 2 ranges separately, reducing the encoding noise. The same could be done with phase, instead of encoding it into one component, you can encode into 2 components, splitting the range into 2, and encoding each into a different component.
    * Just predict the mix of instruments (piano, guitar, bass, violin, etc) and join with the vocal input signal.
    * Due to problems with RAM on google colab, I can only train the model with 42 images and test with 8. I think that by reducing the images size the number of images for training can be increased.
-   
+   * Due to the previous, the subset of the dataset used don't allow that the pix2pix network doesn't learn a lot. With more ram I expect more interesting results. 
+
+## Final Conclusions:
+Despite the numerous problems detailed in the previous section, the results show are very promising, as long as the problems shown above are solved and the quantification of the image components is improved.
+This novel approach can provide numerous advances in multiple fields such as the problem of separating the components of a song, the creation of automatic music from a voice, recreational use as in karaokes, etc.
+With a bigger dataset (RAM problem) the use of 16-bits by components images (like .tiff) and a faster machine I expected even better results. 
+
 ## To go further:
 The Fourier transform (FT) decomposes a function of time (a signal) into its constituent frequencies. This is similar to the way a musical chord can be expressed in terms of the volumes and frequencies of its constituent notes. The term Fourier transform refers to both the frequency domain representation and the mathematical operation that associates the frequency domain representation to a function of time. The Fourier transform of a function of time is itself a complex-valued function of frequency, whose magnitude (modulus) represents the amount of that frequency present in the original function, and whose argument is the phase offset of the basic sinusoid in that frequency. (See: https://en.wikipedia.org/wiki/Fourier_transform)
 
