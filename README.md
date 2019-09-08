@@ -1,8 +1,10 @@
 # Vocals2Song
 Tensorflow implementation of pix2pix for creating music from a voice signal.
 
+
 ## Description:
 This project consists in the creation of music from a voice audio, using the implementation of Tensorflow pix2pix. It is approached as an inverse problem of separation of components in a song.  I have pre-processed the raw data (vocals and mixture pair dataset) in an image that contains encoded information provided by the spectrogram of the signals, which can be treated as a 2-D image to train the pix2pix model. 
+
 
 ## Pix2Pix model:
 Pix2Pix is a Generative Adversarial Network, or GAN, model designed for general purpose image-to-image translation, trained on paired examples.
@@ -24,6 +26,7 @@ The benefit of the Pix2Pix model is that compared to other GANs for conditional 
    * TensorFlow >= 1.0.0
    * librosa
 
+
 ## Base Dataset:
 The dataset used is the musdb18hq, which is widely used in the field of Deep learning for tasks of Music Unmixing, ie for a song (mixture), is intended to isolate each of the components that make up a song. 
 The musdb18 is a dataset of 150 full lengths music tracks (~10h duration) of different genres along with their isolated drums, bass, vocals and others stems.
@@ -32,6 +35,7 @@ All signals are stereophonic and encoded at 44.1kHz.
 As an alternative, we also offer the uncompressed WAV files for models that aim to predict high bandwidth of up to 22 kHz. Other than that, MUSDB18-HQ is identical to MUSDB18.
 
 ![Source Dataset](https://sigsep.github.io/datasets/musdb.html)
+
 
 ## Data pre-processing:
 For the data pre-processing, first, the spectrogram of an audio signal of 15 seconds is obtained (for that of standardizing sizes, although they could be filled with zeros if the signal has a duration of that one) and this spectrogram is encoded in an image. In this coding, in the component R (Red) of the image is coded the module of the spectrogram, that is to say, the power of each one of the frequencies in all the temporal range and, in the component G (Green) of the image is coded the phase of the signal, something very important if we want to reconstruct the original signal, since not only we need the module, but also the phase. Finally, component B (Blue) is imposed to be 0. That image is saved with a data format that is able to read Tensorflow as it is .bmp. For it, each one of the components is quantified between integer values from 0 to 255, since .bmp is an image format of 8 bits for each component.
@@ -49,9 +53,6 @@ The dataset created are 2274 images of voices (~16GB) and it's 2274 images of mi
 Each image has a resolution of 2056 x 513 pixels.
 
 
-## Results:
-TBC!!
-
 ## Where can this approach be applied?
    * Applications where you enter a voice and get a music appropriate to that voice.
    * Create music cover, where the network only trains with voice and (voice+piano) pairs, or something like this.
@@ -62,6 +63,11 @@ TBC!!
    
 Basically any task where it involves audio signals and there is an adequate dataset.
 
+
+## Results:
+TBC!!
+
+
 ## Main problems encountered and possible improvements:
    * Due to the quantification of the sound spectrogram to an 8-bit coded .bpm image (integer values between 0 and 255), quite a huge quantification noise is generated (see https://en.wikipedia.org/wiki/Quantization_(signal_processing)#Quantization_noise_model).
    * Other formats could be used such as .tiff, which allows images to be encoded in 16 bits per channel, but Tensorflow does not allow .tiff images to be read at present (07/09/2019).
@@ -70,10 +76,25 @@ Basically any task where it involves audio signals and there is an adequate data
    * Due to problems with RAM on google colab, I can only train the model with 42 images and test with 8. I think that by reducing the images size the number of images for training can be increased.
    * Due to the previous, the subset of the dataset used don't allow that the pix2pix network doesn't learn a lot. With more ram I expect more interesting results. 
 
+## How to use the proyect:
+In order to use the designed project you must follow the following steps:
+
+1º: Obtain a dataset of pairs of audios to work with.
+
+2º: Pre-process the audio files with the sound2image_mp.py file. It is necessary to adapt the parameters of this file to fit the selected audio files, such as the duration of the treated audio portion, the size of the fourier transform window, etc.
+
+3º: We already have the pairs of images that the pix2pix model needs (voices2mixture.ipyb file), now to train the model. To do this, the model needs in a folder inputs all the images corresponding to the isolated voice signals. In addition it needs in another folder the images of the mixures signals. The model performs the split to obtain the training and test dataset.
+
+4º: Once the model has been trained, in order to hear the result, we have to perform the inverse step to 2, that is, convert the image to sound. To do this, using the file image2sound.py and providing the path to the image we want to convert, we convert it to an audio signal in .wav format.
+ 
+
 ## Final Conclusions:
 Despite the numerous problems detailed in the previous section, the results show are very promising, as long as the problems shown above are solved and the quantification of the image components is improved.
 This novel approach can provide numerous advances in multiple fields such as the problem of separating the components of a song, the creation of automatic music from a voice, recreational use as in karaokes, etc.
 With a bigger dataset (RAM problem) the use of 16-bits by components images (like .tiff) and a faster machine I expected even better results. 
+
+## What is each file:
+
 
 ## To go further:
 The Fourier transform (FT) decomposes a function of time (a signal) into its constituent frequencies. This is similar to the way a musical chord can be expressed in terms of the volumes and frequencies of its constituent notes. The term Fourier transform refers to both the frequency domain representation and the mathematical operation that associates the frequency domain representation to a function of time. The Fourier transform of a function of time is itself a complex-valued function of frequency, whose magnitude (modulus) represents the amount of that frequency present in the original function, and whose argument is the phase offset of the basic sinusoid in that frequency. (See: https://en.wikipedia.org/wiki/Fourier_transform)
@@ -93,6 +114,8 @@ Example of sound-image-sound process:
 
 This project is part of the competition organized by the youtube channel [dotcsv](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg), which I strongly recommend to subscribe if you want to learn machine learning, deep learning, etc, or if you don't want learn about this, you can also subscribe. 
 \#RetoDotCSV2080Super
+
+
 ## Author:
 Antonio Guillen-Perez
 antonio_algaida@hotmail.com
