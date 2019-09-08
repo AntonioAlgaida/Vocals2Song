@@ -19,6 +19,10 @@ As an alternative, we also offer the uncompressed WAV files for models that aim 
 ## Data pre-processing:
 For the data pre-processing, first, the spectrogram of an audio signal of 15 seconds is obtained (for that of standardizing sizes, although they could be filled with zeros if the signal has a duration of that one) and this spectrogram is encoded in an image. In this coding, in the component R (Red) of the image is coded the module of the spectrogram, that is to say, the power of each one of the frequencies in all the temporal range and, in the component G (Green) of the image is coded the phase of the signal, something very important if we want to reconstruct the original signal, since not only we need the module, but also the phase. Finally, component B (Blue) is imposed to be 0. That image is saved with a data format that is able to read Tensorflow as it is .bmp. For it, each one of the components is quantified between integer values from 0 to 255, since .bmp is an image format of 8 bits for each component.
 As the signal we are processing is sampled at 44.1kHz, with a duration of 15 seconds per signal, and the spectrogram is obtained with a fft of size 1024 and with a jump between ffts of 256 samples, the result of processing each of the signals gives us an image of size 2584 x 513 pixels. Remembering that in each one of these pixels is coded the module and the phase for each one of the frequencies in all the temporal interval, whose ranges are quantized between 0 and 255, being images .bmp.
+After this processing we obtain the following:
+Encoded voice: ![Encoded voice](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/vocals_encoded.png)
+Encoded mixture: ![Encoded mixture](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/mixture_encoded.png)
+
 
 ## Dataset created:
 TBC!!
@@ -56,9 +60,9 @@ To calculate the spectogram, the `librosa.stft` function has been used, which re
 To calculate the audio signal from the coded image, the `librosa.istft` function has been used, where the input parameters is the matrix previously commented, and the parameters used for the fourier transforms.
 
 Example of sound-image-sound process:
-Origin audio: ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/origin%20audio.wav)
-Encoded image: ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/enconded%20audio.bmp)
-Decoded audio: ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/decoded%20audio.wav)
+Origin audio: ![Origin audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/origin%20audio.wav)
+Encoded image: ![Encoded image](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/enconded%20audio.bmp)
+Decoded audio: ![Decoded audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/decoded%20audio.wav)
 
 This project is part of the competition organized by the youtube channel [dotcsv](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg), which I strongly recommend to subscribe if you want to learn machine learning, deep learning, etc, or if you don't want learn about this, you can also subscribe. 
 \#RetoDotCSV2080Super
