@@ -43,8 +43,8 @@ Encoded mixture: ![Encoded mixture](https://github.com/AntonioAlgaida/Vocals2Son
 
 
 ## Dataset created:
-The dataset created are 2024 images of voices and it's 2024 images of mixtures. Each image has a resolution of 2056 x 513
-TBC!!
+The dataset created are 2274 images of voices (~16GB) and it's 2274 images of mixtures (~16GB).
+Each image has a resolution of 2056 x 513 pixels.
 
 
 ## Results:
