@@ -5,7 +5,18 @@ Tensorflow implementation of pix2pix for creating music from a voice signal.
 This project consists in the creation of music from a voice audio, using the implementation of Tensorflow pix2pix. It is approached as an inverse problem of separation of components in a song.  I have pre-processed the raw data (vocals and mixture pair dataset) in an image that contains encoded information provided by the spectrogram of the signals, which can be treated as a 2-D image to train the pix2pix model. 
 
 ## Pix2Pix model:
-TBC!!
+Pix2Pix is a Generative Adversarial Network, or GAN, model designed for general purpose image-to-image translation, trained on paired examples.
+
+For example, the model can be used to translate images of daytime to nighttime, or from sketches of products like shoes to photographs of products.
+
+The GAN architecture is comprised of a generator model for outputting new plausible synthetic images and a discriminator model that classifies images as real (from the dataset) or fake (generated). The discriminator model is updated directly, whereas the generator model is updated via the discriminator model. As such, the two models are trained simultaneously in an adversarial process where the generator seeks to better fool the discriminator and the discriminator seeks to better identify the counterfeit images.
+
+The Pix2Pix model is a type of conditional GAN, or cGAN, where the generation of the output image is conditional on an input, in this case, a source image. The discriminator is provided both with a source image and the target image and must determine whether the target is a plausible transformation of the source image.
+
+The benefit of the Pix2Pix model is that compared to other GANs for conditional image generation, it is relatively simple and capable of generating large high-quality images across a variety of image translation tasks.
+
+![Gan architecture](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/GANs.png)
+![Image credits](https://www.freecodecamp.org/news/an-intuitive-introduction-to-generative-adversarial-networks-gans-7a2264a81394/)
 
 
 ## Requirements:
