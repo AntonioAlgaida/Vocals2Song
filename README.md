@@ -75,8 +75,8 @@ Basically any task where it involves audio signals and there is an adequate data
 ![Training Gif](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/training_evolution.gif)
 The results, while not yet showing impressive results, show that this type of GAN networks could be used for audio processing, with a previous transformation of the spectrogram to a suitable image.
 Other results can be heard on:
-| Expected | Predicted |
-| -------- | --------- |
+![Other Results](https://github.com/AntonioAlgaida/Vocals2Song/tree/master/Results/Others)
+
 
 ## Main problems encountered and possible improvements:
    * Due to the quantification of the sound spectrogram to an 8-bit coded .bpm image (integer values between 0 and 255), quite a huge quantification noise is generated (see https://en.wikipedia.org/wiki/Quantization_(signal_processing)#Quantization_noise_model).
