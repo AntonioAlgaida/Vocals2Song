@@ -35,7 +35,7 @@ musdb18 contains two folders, a folder with a training set: "train", composed of
 All signals are stereophonic and encoded at 44.1kHz.
 As an alternative, we also offer the uncompressed WAV files for models that aim to predict high bandwidth of up to 22 kHz. Other than that, MUSDB18-HQ is identical to MUSDB18.
 
-![Source Dataset](https://sigsep.github.io/datasets/musdb.html)
+![Source Dataset](https://sigsep.github.io/datasets/musdb.html)https://sigsep.github.io/datasets/musdb.html
 
 
 ## Data pre-processing:
@@ -52,7 +52,7 @@ Encoded mixture: ![Encoded mixture](https://github.com/AntonioAlgaida/Vocals2Son
 ## Dataset created:
 The dataset created are 2274 images of voices (~16GB) and it's 2274 images of mixtures (~16GB).
 Each image has a resolution of 2056 x 513 pixels.
-
+This resolution is important, as each pixel of the image contains information both temporally and frequently. Therefore, it is not possible to change the resolution of the image to a smaller size. This damages the performance of the network, but with adequate hardware, the performance is adequate. 
 
 ## Where can this approach be applied?
    * Applications where you enter a voice and get a music appropriate to that voice.
@@ -73,8 +73,10 @@ Basically any task where it involves audio signals and there is an adequate data
 | Mixture predicted | ![Audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/predicted.wav)  | ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/predicted.png)  |
 
 ![Training Gif](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/training_evolution.gif)
-TBC!!
-
+The results, while not yet showing impressive results, show that this type of GAN networks could be used for audio processing, with a previous transformation of the spectrogram to a suitable image.
+Other results can be heard on:
+| Expected | Predicted |
+| -------- | --------- |
 
 ## Main problems encountered and possible improvements:
    * Due to the quantification of the sound spectrogram to an 8-bit coded .bpm image (integer values between 0 and 255), quite a huge quantification noise is generated (see https://en.wikipedia.org/wiki/Quantization_(signal_processing)#Quantization_noise_model).
