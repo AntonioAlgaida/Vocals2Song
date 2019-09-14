@@ -77,13 +77,18 @@ Training GIF:
 ![Training Gif](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/training_evolution.gif)
 
 The results, while not yet showing impressive results, show that this type of GAN networks could be used for audio processing, with a previous transformation of the spectrogram to a suitable image.
+
 Other results can be heard on:
 ![Other Results](https://github.com/AntonioAlgaida/Vocals2Song/tree/master/Results/Others)
+
 Where X_input{.wav/.bmp} is the audio containing only the vocals, X_output{.wav/.bmp} is the audio containing the mixture audio and X_predicted{.wav/.bmp} is the mixture audio predicted by the Pix2Pix network performed in this work. X is an integer value between 0 and 7, which indicates each of the test audios.
 
-The Pix2Pix network has been trained for 24 hours in Colab de google. The final results obtained on 14/09/2019 at 23:19 are shown below.
+The Pix2Pix network has been trained for 24 hours in Colab de google. 
+
+The final results obtained on 14/09/2019 at 23:19 are shown below.
 ![Last results on 14/09/2019:] https://github.com/AntonioAlgaida/Vocals2Song/tree/master/Results
 These results are {130,170,178,189,196}_notrain_0.wav_
+
 Although the final results obtained are not impressive, they show promising results.
 
 ## Main problems encountered and possible improvements:
