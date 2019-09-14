@@ -18,7 +18,7 @@ The Pix2Pix model is a type of conditional GAN, or cGAN, where the generation of
 The benefit of the Pix2Pix model is that compared to other GANs for conditional image generation, it is relatively simple and capable of generating large high-quality images across a variety of image translation tasks.
 
 ![Gan architecture](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/GANs.png)
-![Image credits](https://www.freecodecamp.org/news/an-intuitive-introduction-to-generative-adversarial-networks-gans-7a2264a81394)
+![Image credits](https://www.freecodecamp.org/news/an-intuitive-introduction-to-generative-adversarial-networks-gans-7a2264a81394): https://www.freecodecamp.org/news/an-intuitive-introduction-to-generative-adversarial-networks-gans-7a2264a81394/
 
 
 ## Requirements:
