@@ -3,7 +3,7 @@ Tensorflow implementation of pix2pix for creating music from a voice signal.
 
 
 ## Description:
-This project consists in the creation of music from a voice audio, using the implementation of Tensorflow pix2pix. It is approached as an inverse problem of separation of components in a song.  I have pre-processed the raw data (vocals and mixture pair dataset) in an image that contains encoded information provided by the spectrogram of the signals, which can be treated as a 2-D image to train the pix2pix model. 
+This project consists in the creation of music from a voice audio, using the implementation of Tensorflow pix2pix. It is approached as an inverse problem of separation of components in a song. The main idea is to use this network to create music, only by introducing voice. To do this, the network will be trained with a dataset with pairs of voices / mixures (voices + piano + guitar + bass + drums + ...). I have pre-processed the raw data (vocals and mixture pair dataset) in an image that contains encoded information provided by the spectrogram of the signals, which can be treated as a 2-D image to train the pix2pix model. 
 
 
 ## Pix2Pix model:
@@ -54,6 +54,7 @@ The dataset created are 2274 images of voices (~16GB) and it's 2274 images of mi
 Each image has a resolution of 2056 x 513 pixels.
 This resolution is important, as each pixel of the image contains information both temporally and frequently. Therefore, it is not possible to change the resolution of the image to a smaller size. This damages the performance of the network, but with adequate hardware, the performance is adequate. 
 
+
 ## Where can this approach be applied?
    * Applications where you enter a voice and get a music appropriate to that voice.
    * Create music cover, where the network only trains with voice and (voice+piano) pairs, or something like this.
@@ -77,6 +78,11 @@ The results, while not yet showing impressive results, show that this type of GA
 Other results can be heard on:
 ![Other Results](https://github.com/AntonioAlgaida/Vocals2Song/tree/master/Results/Others)
 Where X_input{.wav/.bmp} is the audio containing only the vocals, X_output{.wav/.bmp} is the audio containing the mixture audio and X_predicted{.wav/.bmp} is the mixture audio predicted by the Pix2Pix network performed in this work. X is an integer value between 0 and 7, which indicates each of the test audios.
+
+The Pix2Pix network has been trained for 24 hours in Colab de google. The final results obtained on 14/09/2019 at 23:19 are shown below.
+![Last results on 14/09/2019:] https://github.com/AntonioAlgaida/Vocals2Song/tree/master/Results
+These results are {130,170,178,189,196}_notrain_0.wav_
+Although the final results obtained are not impressive, they show promising results.
 
 ## Main problems encountered and possible improvements:
    * Due to the quantification of the sound spectrogram to an 8-bit coded .bpm image (integer values between 0 and 255), quite a huge quantification noise is generated (see https://en.wikipedia.org/wiki/Quantization_(signal_processing)#Quantization_noise_model).
