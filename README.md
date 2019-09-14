@@ -66,14 +66,16 @@ This resolution is important, as each pixel of the image contains information bo
 Basically any task where it involves audio signals and there is an adequate dataset.
 
 
-## Results:
+## Results and Conclusions:
 |           | Audio | Spectrogram |
 | --------- | ------------- | ------------- |
 | Voice     | ![Audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/input.wav)   | ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/input.png)  |
 | Mixture    | ![Audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/output.wav)   | ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/output.png)  |
 | Mixture predicted | ![Audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/predicted.wav)  | ![](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/predicted.png)  |
 
+Training GIF:
 ![Training Gif](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/Results/training_evolution.gif)
+
 The results, while not yet showing impressive results, show that this type of GAN networks could be used for audio processing, with a previous transformation of the spectrogram to a suitable image.
 Other results can be heard on:
 ![Other Results](https://github.com/AntonioAlgaida/Vocals2Song/tree/master/Results/Others)
@@ -104,11 +106,13 @@ In order to use the designed project you must follow the following steps:
 3º: We already have the pairs of images that the pix2pix model needs (voices2mixture.ipyb file), now to train the model. To do this, the model needs in a folder inputs all the images corresponding to the isolated voice signals. In addition it needs in another folder the images of the mixures signals. The model performs the split to obtain the training and test dataset.
 
 4º: Once the model has been trained, in order to hear the result, we have to perform the inverse step to 2, that is, convert the image to sound. To do this, using the file image2sound.py and providing the path to the image we want to convert, we convert it to an audio signal in .wav format.
- 
+
+
 ## Final Conclusions:
 Despite the numerous problems detailed in the previous section, the results show are very promising, as long as the problems shown above are solved and the quantification of the image components is improved.
 This novel approach can provide numerous advances in multiple fields such as the problem of separating the components of a song, the creation of automatic music from a voice, recreational use as in karaokes, etc.
 With a bigger dataset (RAM problem) the use of 16-bits by components images (like .tiff) and a faster machine I expected even better results. 
+
 
 ## To go further:
 The Fourier transform (FT) decomposes a function of time (a signal) into its constituent frequencies. This is similar to the way a musical chord can be expressed in terms of the volumes and frequencies of its constituent notes. The term Fourier transform refers to both the frequency domain representation and the mathematical operation that associates the frequency domain representation to a function of time. The Fourier transform of a function of time is itself a complex-valued function of frequency, whose magnitude (modulus) represents the amount of that frequency present in the original function, and whose argument is the phase offset of the basic sinusoid in that frequency. (See: https://en.wikipedia.org/wiki/Fourier_transform)
@@ -126,7 +130,7 @@ Example of sound-image-sound process:
    * Encoded image: ![Encoded image](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/enconded%20audio.bmp)
    * Decoded audio: ![Decoded audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/decoded%20audio.wav)
 
-This project is part of the competition organized by the youtube channel [dotcsv](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg), which I strongly recommend to subscribe if you want to learn machine learning, deep learning, etc, or if you don't want learn about this, you can also subscribe. 
+This project is part of the competition organized by the youtube channel [dotcsv](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg), which I strongly recommend to subscribe if you want to learn machine learning, deep learning, etc, or if you don't want learn about this, you can also subscribe. #RetoDotCSV2080Super
 
 
 ## Author:
@@ -134,19 +138,12 @@ Antonio Guillen-Perez
 antonio_algaida@hotmail.com
 ![twitter](https://twitter.com/neethisp)
 
-
 ## Dataset Credits:
 dataset = musdb18-hq,
-
 Authors = {Rafii, Zafar and Liutkus, Antoine and Stöter, Fabian-Robert and Mimilakis, Stylianos Ioannis and                  Bittner, Rachel},
-
 title = {MUSDB18-HQ - an uncompressed version of MUSDB18},
-
 month = aug,
-
 year = 2019,
-
 doi = {10.5281/zenodo.3338373},
-
 url = {https://doi.org/10.5281/zenodo.3338373}
 
