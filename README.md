@@ -76,7 +76,7 @@ Basically any task where it involves audio signals and there is an adequate data
 The results, while not yet showing impressive results, show that this type of GAN networks could be used for audio processing, with a previous transformation of the spectrogram to a suitable image.
 Other results can be heard on:
 ![Other Results](https://github.com/AntonioAlgaida/Vocals2Song/tree/master/Results/Others)
-
+Where X_input{.wav/.bmp} is the audio containing only the vocals, X_output{.wav/.bmp} is the audio containing the mixture audio and X_predicted{.wav/.bmp} is the mixture audio predicted by the Pix2Pix network performed in this work. X is an integer value between 0 and 7, which indicates each of the test audios.
 
 ## Main problems encountered and possible improvements:
    * Due to the quantification of the sound spectrogram to an 8-bit coded .bpm image (integer values between 0 and 255), quite a huge quantification noise is generated (see https://en.wikipedia.org/wiki/Quantization_(signal_processing)#Quantization_noise_model).
@@ -85,7 +85,9 @@ Other results can be heard on:
    * Just predict the mix of instruments (piano, guitar, bass, violin, etc) and join with the vocal input signal.
    * Due to problems with RAM on google colab, I can only train the model with 42 images and test with 8. I think that by reducing the images size the number of images for training can be increased.
    * Due to the previous, the subset of the dataset used don't allow that the pix2pix network doesn't learn a lot. With more ram I expect more interesting results. 
-
+   * Perhaps, the use of a dataset containing electronic music, which contains musical notes more marked and contained in time, could improve the performance of the network.
+   * Due to the low number of training images (the network was trained with only 42 images) the network was trained with 42 images * 15 secs/image = 630 secs = 10.5 mins. This value is very low. It should be corrected in future versions of this study.
+   
 ## How to use the proyect:
 In order to use the designed project you must follow the following steps:
 
@@ -97,14 +99,10 @@ In order to use the designed project you must follow the following steps:
 
 4º: Once the model has been trained, in order to hear the result, we have to perform the inverse step to 2, that is, convert the image to sound. To do this, using the file image2sound.py and providing the path to the image we want to convert, we convert it to an audio signal in .wav format.
  
-
 ## Final Conclusions:
 Despite the numerous problems detailed in the previous section, the results show are very promising, as long as the problems shown above are solved and the quantification of the image components is improved.
 This novel approach can provide numerous advances in multiple fields such as the problem of separating the components of a song, the creation of automatic music from a voice, recreational use as in karaokes, etc.
 With a bigger dataset (RAM problem) the use of 16-bits by components images (like .tiff) and a faster machine I expected even better results. 
-
-## What is each file:
-
 
 ## To go further:
 The Fourier transform (FT) decomposes a function of time (a signal) into its constituent frequencies. This is similar to the way a musical chord can be expressed in terms of the volumes and frequencies of its constituent notes. The term Fourier transform refers to both the frequency domain representation and the mathematical operation that associates the frequency domain representation to a function of time. The Fourier transform of a function of time is itself a complex-valued function of frequency, whose magnitude (modulus) represents the amount of that frequency present in the original function, and whose argument is the phase offset of the basic sinusoid in that frequency. (See: https://en.wikipedia.org/wiki/Fourier_transform)
