@@ -86,7 +86,7 @@ Where X_input{.wav/.bmp} is the audio containing only the vocals, X_output{.wav/
 The Pix2Pix network has been trained for 24 hours in Colab de google. 
 
 The final results obtained on 14/09/2019 at 23:19 are shown below.
-![Last results on 14/09/2019:] https://github.com/AntonioAlgaida/Vocals2Song/tree/master/Results
+![Last results on 14/09/2019:](https://github.com/AntonioAlgaida/Vocals2Song/tree/master/Results)
 These results are {130,170,178,189,196}_notrain_0.wav_
 
 Although the final results obtained are not impressive, they show promising results.
@@ -141,7 +141,7 @@ This project is part of the competition organized by the youtube channel [dotcsv
 ## Author:
 Antonio Guillen-Perez
 antonio_algaida@hotmail.com
-![twitter](https://twitter.com/neethisp)
+https://twitter.com/neethisp
 
 ## Dataset Credits:
 dataset = musdb18-hq,
