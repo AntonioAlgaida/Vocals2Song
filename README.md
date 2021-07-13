@@ -141,7 +141,7 @@ This project is part of the competition organized by the youtube channel [dotcsv
 ## Author:
 Antonio Guillen-Perez
 antonio_algaida@hotmail.com
-https://twitter.com/neethisp
+https://twitter.com/agnprz
 
 ## Dataset Credits:
 dataset = musdb18-hq,
