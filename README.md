@@ -135,8 +135,7 @@ Example of sound-image-sound process:
    * Encoded image: ![Encoded image](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/enconded%20audio.bmp)
    * Decoded audio: ![Decoded audio](https://github.com/AntonioAlgaida/Vocals2Song/blob/master/decoded%20audio.wav)
 
-This project is part of the competition organized by the youtube channel [dotcsv](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg), which I strongly recommend to subscribe if you want to learn machine learning, deep learning, etc, or if you don't want learn about this, you can also subscribe. #RetoDotCSV2080Super
-
+This project is part of the competition organized by the youtube channel [dotcsv](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg), which I strongly recommend to subscribe if you want to learn machine learning, deep learning, etc, or if you don't want learn about this, you can also subscribe.
 
 ## Author:
 Antonio Guillen-Perez
@@ -145,7 +144,7 @@ https://twitter.com/agnprz
 
 ## Dataset Credits:
 dataset = musdb18-hq,
-Authors = {Rafii, Zafar and Liutkus, Antoine and Stöter, Fabian-Robert and Mimilakis, Stylianos Ioannis and                  Bittner, Rachel},
+Authors = {Rafii, Zafar and Liutkus, Antoine and Stöter, Fabian-Robert and Mimilakis, Stylianos Ioannis and Bittner, Rachel},
 title = {MUSDB18-HQ - an uncompressed version of MUSDB18},
 month = aug,
 year = 2019,
